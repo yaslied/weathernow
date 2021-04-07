@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:weather_now/controller/api_weather_controller.dart';
 
 class home extends StatefulWidget {
   @override
@@ -53,6 +54,9 @@ class _homeState extends State<home> {
                 ],
               ),
               Column(),
+              FloatingActionButton(onPressed: () {
+                ApiWeatherController().testApi();
+              })
             ]),
           ),
         ],
