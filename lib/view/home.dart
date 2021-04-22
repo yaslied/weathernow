@@ -1,5 +1,5 @@
 import 'dart:math';
-
+import 'package:weather_now/model/tarefa.dart';
 import 'package:flutter/material.dart';
 import 'package:weather_now/controller/api_weather_controller.dart';
 
@@ -9,6 +9,19 @@ class home extends StatefulWidget {
 }
 
 class _homeState extends State<home> {
+  TarefaHelper helper = TarefaHelper();
+
+  @override
+  void initState() {
+    Tarefa t = Tarefa();
+    t.titulo = "teste";
+    t.descricao = "desc";
+
+    helper.saveTarefa(t);
+
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
